@@ -1,13 +1,25 @@
-from tkinter import *
-# Setup meta
-root = Tk()
-root.title("Game of Life")
+# import tkinter as tk
+# import tkinter.ttk as ttk
 
-# Define grid
-canv = Canvas(root, width=600, height=600)
+# HEIGHT = 10
+# WIDTH = 10
 
-# Visualize
-canv.pack()
+# # Setup meta
+# root = tk.Tk()
+# root.title("Game of Life")
 
-# Loop
-root.mainloop()
+# # Define grid
+# frame = tk.LabelFrame(root, padx = 5, pady=5)
+
+# empty_pixel_style = ttk.Style()
+# empty_pixel_style.configure('W.TButton', background='#FFF')
+
+# for i in range(HEIGHT):
+#   for j in range(WIDTH):
+#     ttk.Button(frame, text="0", style='W.TButton').grid(row=i, column=j, padx=0, pady=0, ipadx=0, ipady=0)
+      
+# # Visualize
+# frame.pack()
+
+# # Loop
+# root.mainloop()
