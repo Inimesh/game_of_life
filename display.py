@@ -1,5 +1,13 @@
 from tkinter import *
-
+# Setup meta
 root = Tk()
-canv = Canvas(root, height=300, width=300)
+root.title("Game of Life")
+
+# Define grid
+canv = Canvas(root, width=600, height=600)
+
+# Visualize
+canv.pack()
+
+# Loop
 root.mainloop()
