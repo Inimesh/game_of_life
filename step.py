@@ -13,4 +13,14 @@ class Step:
 
     return new_grid
 
+  def observe(self, i, j):
+    g = self.board.grid
+    rw = 1 - self.board.width
+    rh = 1 - self.board.height
+    return [ 
+      [g[i-1][j-1], g[i-1][j], g[i-1][j+rw]],
+      [g[i][j-1], None, g[i][j+rw]],
+      [g[i+rh][j-1], g[i+rh][j], g[i+rh][j+rw]]
+    ]
+
   

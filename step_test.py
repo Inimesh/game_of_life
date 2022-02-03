@@ -26,8 +26,8 @@ def test_observe_environment():
   The cell being observed should be counted as None type"""
   board = Board(5, 5, start_positions)
   step = Step(board)
-  assert step.observe(1,1) == [
-    [0, 0, 0],
+  assert step.observe(2,2) == [
+    [0, 1, 0],
     [0, None, 0],
-    [0, 0, 1]
+    [1, 1, 0]
   ]
