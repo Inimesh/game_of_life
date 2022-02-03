@@ -31,3 +31,10 @@ def test_observe_environment():
     [0, None, 0],
     [1, 1, 0]
   ]
+
+def test_num_living():
+    """Step.num_living(env) should return the number of living cells (cell == 1)"""
+    board = Board(5, 5, start_positions)
+    step = Step(board)
+    env = step.observe(2,2)
+    assert step.num_living(env) == 3
