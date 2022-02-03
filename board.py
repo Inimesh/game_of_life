@@ -1,5 +1,5 @@
 class Board:
-  def __init__(self, width, height, start_positions=[]):
+  def __init__(self, width=5, height=5, start_positions=[]):
     self.width = width
     self.height = height
     self.grid = [[0 for j in range(self.width)] for i in range(self.height)]
