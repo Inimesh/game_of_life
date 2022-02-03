@@ -33,8 +33,8 @@ def test_observe_environment():
   ]
 
 def test_num_living():
-    """Step.num_living(env) should return the number of living cells (cell == 1)"""
+    """Step.count_living(env) should return the number of living cells (cell == 1)"""
     board = Board(5, 5, start_positions)
     step = Step(board)
     env = step.observe(2,2)
-    assert step.num_living(env) == 3
+    assert step.count_living(env) == 3

@@ -9,7 +9,7 @@ class Step:
     for i in range(self.board.height):
       for j in range(self.board.width):
         env = self.observe(i,j) # observe the environment of the cell
-        
+        num_living = self.count_living(env) # Counts number of living neighbours
 
     return new_grid
 
@@ -23,4 +23,5 @@ class Step:
       [g[i+rh][j-1], g[i+rh][j], g[i+rh][j+rw]]
     ]
 
-  
+  def count_living(self, env):
+    return sum(line.count(1) for line in env)
