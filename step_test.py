@@ -38,3 +38,28 @@ def test_num_living():
     step = Step(board)
     env = step.observe(2,2)
     assert step.count_living(env) == 3
+
+def test_judge():
+  """Step.judge should return the outcome of a cell based on the number of its living neighbours"""
+  board = Board(5, 5, start_positions)
+  step = Step(board)
+  # cell is alive
+  cell = 1
+  assert step.judge(cell, 0) == 0
+  assert step.judge(cell, 1) == 0
+  assert step.judge(cell, 2) == 1
+  assert step.judge(cell, 3) == 1
+  assert step.judge(cell, 4) == 0
+  assert step.judge(cell, 5) == 0
+  assert step.judge(cell, 6) == 0
+
+  # cell is not alive
+  cell = 0
+  assert step.judge(cell, 0) == 0
+  assert step.judge(cell, 1) == 0
+  assert step.judge(cell, 2) == 0
+  assert step.judge(cell, 3) == 1
+  assert step.judge(cell, 4) == 0
+  assert step.judge(cell, 5) == 0
+  assert step.judge(cell, 6) == 0
+  
