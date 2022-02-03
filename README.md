@@ -7,5 +7,7 @@ https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
 # Technology
 
 Written in Python 3.9
+
 GUI: tkinter
+
 Testing framework: Pytest
