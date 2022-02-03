@@ -3,6 +3,7 @@ class Board:
     self.width = width
     self.height = height
     self.grid = [[0 for j in range(self.width)] for i in range(self.height)]
+    self.populate(start_positions)
 
   def pretty_grid(self):
     """A method that returns a formatted string of self.grid"""
