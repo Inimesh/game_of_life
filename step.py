@@ -9,16 +9,16 @@ class Step:
 
     for i in range(self.board.height):
       for j in range(self.board.width):
-        env = self.observe(i,j) # observe the environment of the cell
-        num_living = self.count_living(env) # Counts number of living neighbours
+        env = self.__observe(i,j) # observe the environment of the cell
+        num_living = self.__count_living(env) # Counts number of living neighbours
         cell = self.board.grid[i][j]
         # new_grid[i][j] = self.judge(cell, num_living) # judge if cell lives or dies and save to new grid
-        if self.judge(cell, num_living): # judge if cell lives or dies and save to new grid
+        if self.__judge(cell, num_living): # judge if cell lives or dies and save to new grid
           new_positions.append([i,j])
 
     return new_positions
 
-  def observe(self, i, j):
+  def __observe(self, i, j):
     g = self.board.grid
     rw = 1 - self.board.width
     rh = 1 - self.board.height
@@ -28,10 +28,10 @@ class Step:
       [g[i+rh][j-1], g[i+rh][j], g[i+rh][j+rw]]
     ]
 
-  def count_living(self, env):
+  def __count_living(self, env):
     return sum(line.count(1) for line in env)
 
-  def judge(self, cell, num_living):
+  def __judge(self, cell, num_living):
     if cell == 1: # cell in question is alive
       if num_living < 2 or num_living > 3: # Dies of underpopulation / overpopulation
         return 0
