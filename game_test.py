@@ -23,3 +23,5 @@ class TestGame(unittest.TestCase):
 
     self.assertEqual(len(self.game.rounds), 21)
     
+if __name__ == "__main__":
+  unittest.main()
