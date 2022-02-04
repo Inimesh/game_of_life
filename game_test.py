@@ -26,3 +26,5 @@ class TestGame(unittest.TestCase):
     
 if __name__ == "__main__":
   unittest.main()
+
+  [[1,2],[2,0],[2,2],[3,1],[3,2]]
