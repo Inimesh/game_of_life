@@ -2,6 +2,7 @@ import unittest
 from step import Step
 from board import Board
 
+# TODO Implement mocking in tests
 class TestStep(unittest.TestCase):
 
   def setUp(self):
