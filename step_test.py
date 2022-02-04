@@ -25,7 +25,7 @@ class TestStep(unittest.TestCase):
         [0, 0, 0, 0, 0]
       ])
 
-  def test_observe_environment(self):
+  def test_observe(self):
     """Step.observe should return a 3x3 grid (2D array) of the neighbours of the cell being observed.
     The cell being observed should be counted as None type"""
     self.assertEqual(self.step.observe(2,2), [

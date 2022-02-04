@@ -1,9 +1,9 @@
 class Board:
-  def __init__(self, width=5, height=5, start_positions=[]):
+  def __init__(self, width=5, height=5, positions=[]):
     self.width = width
     self.height = height
     self.grid = [[0 for j in range(self.width)] for i in range(self.height)]
-    self.populate(start_positions)
+    self.populate(positions)
 
   def pretty_grid(self):
     """A method that returns a formatted string of self.grid"""

@@ -3,17 +3,20 @@ class Step:
   def __init__(self, board_obj=Board()):
     self.board = board_obj
   
-  def next_generation(self):
-    new_grid = [list(row) for row in self.board.grid]
+  def generate_new_positions(self):
+    # new_grid = [list(row) for row in self.board.grid]
+    new_positions = []
 
     for i in range(self.board.height):
       for j in range(self.board.width):
         env = self.observe(i,j) # observe the environment of the cell
         num_living = self.count_living(env) # Counts number of living neighbours
-        cell = int(self.board.grid[i][j])
-        new_grid[i][j] = self.judge(cell, num_living) # judge if cell lives or dies and save to new grid
+        cell = self.board.grid[i][j]
+        # new_grid[i][j] = self.judge(cell, num_living) # judge if cell lives or dies and save to new grid
+        if self.judge(cell, num_living): # judge if cell lives or dies and save to new grid
+          new_positions.append([i,j])
 
-    return new_grid
+    return new_positions
 
   def observe(self, i, j):
     g = self.board.grid
