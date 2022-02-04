@@ -15,14 +15,12 @@ class TestStep(unittest.TestCase):
   def tearDown(self):
     pass
 
-  def test_next_gen(self):
+  def test_generate_new_positions(self):
     """Step.next_generation should return a new grid according to the rules of the game"""
-    self.assertEqual(self.step.next_generation(), [
-        [0, 0, 0, 0, 0], 
-        [0, 1, 0, 0, 0], 
-        [0, 0, 1, 1, 0], 
-        [0, 1, 1, 0, 0], 
-        [0, 0, 0, 0, 0]
+    self.assertEqual(self.step.generate_new_positions(), [
+        [1,1],
+        [2,2], [2,3],
+        [3,1],[3,2]
       ])
 
   # def test_observe(self):
