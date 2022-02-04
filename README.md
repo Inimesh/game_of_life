@@ -10,4 +10,4 @@ Written in Python 3.9
 
 GUI: tkinter
 
-Testing framework: Pytest
+Testing framework: unittest
