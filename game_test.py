@@ -19,7 +19,7 @@ class TestGame(unittest.TestCase):
         [3,1],[3,2]
       ])
 
-    self.game.play(20)
+    self.game.play(20, 0)
 
     self.assertEqual(len(self.game.rounds), 21)
     

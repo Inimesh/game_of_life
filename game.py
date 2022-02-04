@@ -26,7 +26,7 @@ class Game():
   # Private methods
   def __print_round(self, num, board):
     print(f"step: {num}")
-    print(board.pretty_grid())
+    print(f"{board.pretty_grid()}\n")
 
   def __get_new_positions(self, board, step_class=Step):
     return step_class(board).generate_new_positions()
