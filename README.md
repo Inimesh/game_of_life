@@ -1,6 +1,6 @@
 # Conway's game of life
 
-This is an attempt to code the "no-player game", Conway's Game of Life.
+This is an attempt to code the "zero-player game", Conway's Game of Life.
 
 https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
 
