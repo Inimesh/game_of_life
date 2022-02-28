@@ -64,7 +64,7 @@ glider_demo()
 
 Discovered by Bill Gosper in 1970, the ["Gosper Glider Gun"](https://en.wikipedia.org/wiki/Gun_(cellular_automaton)#:~:text=Bill%20Gosper%20discovered%20the%20first,other%20rules%20had%20smaller%20guns.). Significant in that this led to the later discovery that Conway's game of life is in fact, function as a Turing Machine.
 ```
-gosper_gun_demo()  # Developed by 
+gosper_gun_demo()
 ```
 
 
