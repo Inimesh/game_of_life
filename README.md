@@ -20,7 +20,7 @@ In a grid of cells..
 
 Navigate to the project directory, start the python3 console and load up the "tabletop".
 
-```
+```bash
 python3 -i tabletop.py
 ```
 
@@ -32,7 +32,7 @@ To save a game setup, pass the arguments to the Game class:
  - height of board
  - start positions (2D array of indices, each represents a live cell start position)
 
-``` 
+```python
 # This will generate grid 18 wide and 11 cells high with starting positions triggering an oscillator pattern!
 
 game_setup = Game(18, 11, [
@@ -47,7 +47,7 @@ To start the game, simply call the `.play()` method on the game setup with the f
 - steps (how many "frames" you want the game to run for)
 - time interval in seconds (default is 0.1 seconds)
 
-```
+```python
 # This will step through 75 frames at a rate of 0.2 seconds per frame
 
 game_setup.play(75, 0.2) 
@@ -56,17 +56,21 @@ game_setup.play(75, 0.2)
 
 There are some demo presets available (while in the python3 console)
 
-To see a glider move across a continuous 5x5 grid
+To see a glider move across a continuous 5x5 grid, run:
 
-```
+```python
 glider_demo()
 ```
 
 Discovered by Bill Gosper in 1970, the ["Gosper Glider Gun"](https://en.wikipedia.org/wiki/Gun_(cellular_automaton)#:~:text=Bill%20Gosper%20discovered%20the%20first,other%20rules%20had%20smaller%20guns.). Significant in that this led to the later discovery that Conway's game of life is in fact, function as a Turing Machine.
-```
+```python
 gosper_gun_demo()
 ```
+To view an example of an 'oscillator' class, "Kok's Galaxy", run:
 
+```python
+koks_galaxy_demo()
+```
 
 # Technology
 
